@@ -1,0 +1,18 @@
+
+public class Main extends Object {
+
+	public static void main(String[] args) {
+		String myString = new String("Hello, World");
+		System.out.println(myString);
+		String str = "Tungjatjeta, bote";
+		System.out.println(str);
+		Integer var = 55;	//wrapper class
+		Byte var1 = 51;
+		Long var2;
+		
+		System.out.println();
+		System.out.println(var1);
+		System.out.println(var);
+	}
+	
+}

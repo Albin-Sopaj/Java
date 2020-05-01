@@ -1,0 +1,29 @@
+//SUBCLASS
+public class MultiClubMember extends Member {
+    
+    private int membershipPoints;
+    
+    //CONSTRUCTOR
+    MultiClubMember(char pMemberType, int pMemberID, String pName, double pFees, int pMembershipPoints){
+        super(pMemberType, pMemberID, pName, pFees);
+        membershipPoints = pMembershipPoints;
+    }
+
+    //THE SETTER AND GETTER
+    
+    public void setMembershipPoints(int pMembershipPoints){
+        membershipPoints = pMembershipPoints;
+    }
+    
+    public int getMembershipPoints()
+    {
+        return membershipPoints;
+    }
+    
+    //TO STRING METHOD
+    @Override
+    public String toString(){
+        return super.toString() + ", " + membershipPoints;
+    }  
+    
+}

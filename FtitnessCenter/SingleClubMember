@@ -1,0 +1,29 @@
+//SUBCLASS
+class SingleClubMember extends Member{
+    
+    private int club;
+    
+    //CONSTRUCTOR
+    SingleClubMember(char pMemberType, int pMemberID, String pName, double pFees, int pClub){
+        super(pMemberType, pMemberID, pName, pFees);
+        club = pClub;
+    }
+
+    //SETTERS AND GETTERS
+    
+    public void setClub(int pClub){
+        club = pClub;
+    }
+    
+    public int getClub(){
+        return club;
+    }
+    
+    //THE TO STRING METHOD, OVERRIDEN
+    @Override
+    public String toString(){
+        return super.toString() + ", " + club;
+    }
+
+    
+}

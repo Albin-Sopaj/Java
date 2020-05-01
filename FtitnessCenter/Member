@@ -1,0 +1,66 @@
+//SUBCLASS
+public class Member {
+    
+    char memberType;
+    int memberID;
+    String name;
+    double fees;
+    
+    //CONSTUCTOR
+    Member(char pMemberType, int pMemberID, String pName, double pFees){
+    //ASSIGN ATTRIBUTES TO PARAMETERS
+        memberType = pMemberType;
+        memberID = pMemberID;
+        name = pName;
+        fees = pFees;               
+    }
+    
+    //SETTERS AND GETTERS
+
+    public void setMemberType(char pMemberType)
+    {
+        memberType = pMemberType;
+    }
+    
+    public char getMemberType()
+    {
+        return memberType;
+    }
+    
+    public void setMemberID(int pMemberID)
+    {
+        memberID = pMemberID;
+    }
+    
+    public int getMemberID()
+    {
+        return memberID;
+    }
+    
+     public void setName(String pName)
+    {
+        name = pName;
+    }
+    
+    public String getName()
+    {
+        return name;
+    }
+    
+    public void setFees(double pFees)
+    {
+        fees = pFees;
+    }
+    
+    public double getFees()
+    {
+        return fees;
+    }
+
+    //TOSTRING METHOD
+    @Override
+    public String toString(){
+       return memberType + ", " + memberID + ", " + name + ", " + fees;
+    }
+
+}

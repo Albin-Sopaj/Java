@@ -1,0 +1,27 @@
+
+public class Demo {
+
+	public static void main(String[] args) {
+		Planet earth = new Planet("Earth", 4.5);
+		earth.addInfo("Blue", "God");
+		earth.addInfo2(true, true, false);
+		earth.addInfo3(3, 0);
+		earth.addInfo4(1/1_300_000, "5.97237×10^24 kg",150_370_000, 0);
+		earth.addInfo5(10_000_000, 14.61, 23.56);
+		System.out.println(earth);
+		
+		Planet jupiter = new Planet("Jupiter", 4.503);
+		jupiter.addInfo("Yellowish orange", "God");
+		jupiter.addInfo2(true, false, true);
+		jupiter.addInfo3(5, 1610);
+		jupiter.addInfo4(1/1000, "1.898 × 10^27 kg", 778_500_000, 746_850_000);
+		System.out.println(jupiter);
+		
+		Planet mars = new Planet("Mars", 5.7);
+		
+		System.out.println(mars);
+		
+		
+	}
+
+}

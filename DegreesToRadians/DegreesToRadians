@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class DegreesToRadians {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		System.out.println("Enter the number of degrees: ");
+		double degrees, result; 
+		degrees = input.nextDouble();
+		input.close();
+		result = convertToRadians(degrees);
+		System.out.println("Your entered number " + degrees + " degrees, equal to "
+				+ result + " radians.");
+	}
+	
+	public static double convertToRadians(double value) {
+		double radians = value * (Math.PI /180);
+		return radians;
+	}
+}

@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class DivideNumber {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		System.out.print("Enter a number: ");
+		double x = input.nextDouble();
+		System.out.print("Enter another number: ");
+		double y = input.nextDouble();
+		input.close();
+		double z = x / y;
+		System.out.println("The result is: " + z + "      --> Division");
+	}
+
+}

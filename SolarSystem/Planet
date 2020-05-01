@@ -1,0 +1,154 @@
+
+public class Planet  extends Planets{
+	private double size, distanceFromSun, distanceFromEarth;
+	private double age, lifespan, averageTemp, lightDuration;
+	private boolean hasMoon, hostLife, hasAsteroids;
+	private int position, yearOfDiscovery;
+	private String color, founder, mass;
+	
+	public Planet(String name, double age) {
+		super(name);
+		this.age = age;
+	}
+	
+	public void addInfo(String color, String founder) {
+		this.color = color;
+		this.founder = founder;
+	}
+	
+	public void addInfo2(boolean hasMoon, boolean hostLife, boolean hasAsteroids) {
+		this.hasMoon = hasMoon;
+		this.hasAsteroids = hasAsteroids;
+		this.hostLife = hostLife;
+	}
+	
+	public void addInfo3(int position, int yearOfDiscovery) {
+		this.position = position;
+		this.yearOfDiscovery = yearOfDiscovery;
+	}
+	
+	public void addInfo4(double size, String mass, double distanceFromSun, double distanceFromEarth) {
+		this.size = size;
+		this.mass = mass;
+		this.distanceFromSun = distanceFromSun;
+		this.distanceFromEarth = distanceFromEarth;
+	}
+	
+	public void addInfo5(double lifespan, double averageTemp, double lightDuration) {
+		this.lifespan = lifespan;
+		this.averageTemp = averageTemp;
+		this.lightDuration = lightDuration;
+	}
+	
+	public double getSize() {
+		return size;
+	}
+	public void setSize(double size) {
+		this.size = size;
+	}
+	public String getMass() {
+		return mass;
+	}
+	public void setMass(String mass) {
+		this.mass = mass;
+	}
+	public double getDistanceFromSun() {
+		return distanceFromSun;
+	}
+	public void setDistanceFromSun(double distanceFromSun) {
+		this.distanceFromSun = distanceFromSun;
+	}
+	public double getDistanceFromEarth() {
+		return distanceFromEarth;
+	}
+	public void setDistanceFromEarth(double distanceFromEarth) {
+		this.distanceFromEarth = distanceFromEarth;
+	}
+	public double getLightDuration() {
+		return lightDuration;
+	}
+	public void setLightDuration(double lightDuration) {
+		this.lightDuration = lightDuration;
+	}
+	public double getAge() {
+		return age;
+	}
+	public void setAge(double age) {
+		this.age = age;
+	}
+	public double getLifespan() {
+		return lifespan;
+	}
+	public void setLifespan(double lifespan) {
+		this.lifespan = lifespan;
+	}
+	public double getAverageTemp() {
+		return averageTemp;
+	}
+	public void setAverageTemp(double averageTemp) {
+		this.averageTemp = averageTemp;
+	}
+	public boolean isHasMoon() {
+		return hasMoon;
+	}
+	public void setHasMoon(boolean hasMoon) {
+		this.hasMoon = hasMoon;
+	}
+	public boolean isHostLife() {
+		return hostLife;
+	}
+	public void setHostLife(boolean hostLife) {
+		this.hostLife = hostLife;
+	}
+	public boolean isHasAsteroids() {
+		return hasAsteroids;
+	}
+	public void setHasAsteroids(boolean hasAsteroids) {
+		this.hasAsteroids = hasAsteroids;
+	}
+	public int getPosition() {
+		return position;
+	}
+	public void setPosition(int position) {
+		this.position = position;
+	}
+	public int getYearOfDiscovery() {
+		return yearOfDiscovery;
+	}
+	public void setYearOfDiscovery(int yearOfDiscovery) {
+		this.yearOfDiscovery = yearOfDiscovery;
+	}
+	public String getColor() {
+		return color;
+	}
+	public void setColor(String color) {
+		this.color = color;
+	}
+	public String getFounder() {
+		return founder;
+	}
+	public void setFounder(String founder) {
+		this.founder = founder;
+	}
+	
+	@Override
+	public String toString() {
+		StringBuilder output = new StringBuilder();
+		output.append("Name: ").append(getName()).append("\n");
+		output.append("Size: ").append(size).append(" compared to sun\n");
+		output.append("Mass: ").append(mass).append("\n");
+		output.append("Distance from Sun: ").append(distanceFromSun).append(" km\n");
+		output.append("Distance from Earth: ").append(distanceFromEarth).append(" km\n");
+		output.append("Light Duration: ").append(lightDuration).append(" hours\n");
+		output.append("Age: ").append(age).append(" years\n");
+		output.append("Lifespan: ").append(lifespan).append(" years\n");
+		output.append("Average Temperature: ").append(averageTemp).append(" Celsius\n");
+		output.append("Has moon: ").append(hasMoon).append("\n");
+		output.append("Hosts Life: ").append(hostLife).append("\n");
+		output.append("Has asteroids: ").append(hasAsteroids).append("\n");
+		output.append("Position: ").append(position).append("\n");
+		output.append("Year of Discovery: ").append(yearOfDiscovery).append("\n");
+		output.append("Color: ").append(color).append("\n");
+		return output.toString();
+	}
+}

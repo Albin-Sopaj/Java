@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class AddNumbers {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		System.out.println("Enter a number: ");
+		int x = input.nextInt();
+		System.out.println("Enter another number: ");
+		int y = input.nextInt();
+		input.close();
+		int sum = x + y;
+		System.out.println("The result is: " + sum + "        ---> the sum");
+	}
+
+}

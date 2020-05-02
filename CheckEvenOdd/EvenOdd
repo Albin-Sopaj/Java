@@ -1,7 +1,6 @@
 //Write the AlternaNumeri program that asks the user to enter 10 numbers 
-//and reprint them, first printing the numbers entered in the odd entries 
-//(the first, third, fifth, seventh and ninth) and then the numbers entered 
-//in the even entries (the second, fourth, sixth, eighth and tenth).
+//and reprint them first the even numbers, and then it prints the odd numbers
+
 import java.util.Scanner;
 
 public class AlternaNumeri {

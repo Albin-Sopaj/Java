@@ -1,0 +1,33 @@
+//Write the AlternaNumeri program that asks the user to enter 10 numbers 
+//and reprint them, first printing the numbers entered in the odd entries 
+//(the first, third, fifth, seventh and ninth) and then the numbers entered 
+//in the even entries (the second, fourth, sixth, eighth and tenth).
+import java.util.Scanner;
+
+public class AlternaNumeri {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		System.out.println("Enter 10 numbers: ");
+		int[] numbers = new int[10];
+		for(int i = 0; i < 10; i++) {
+			numbers[i] = input.nextInt();
+		}
+		input.close();
+		//check if numbers are even
+		System.out.println("The even numbers are: ");
+		for(int e:numbers) {
+			if(e % 2 == 0) {
+				System.out.println(e);
+			} 
+		}
+
+		//check if numbers are odd
+		System.out.println("\nThe odd numbers are: ");
+		for(int e:numbers) {
+			if(e % 2 != 0) {
+				System.out.println(e);
+			}
+		}
+	}
+}

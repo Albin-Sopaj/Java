@@ -1,0 +1,27 @@
+//This is a Java program to print the elements of an Array
+
+import java.util.Scanner;
+
+public class PrintElementsOfArray {
+
+	public static void main(String[] args) throws Exception {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("How many elements do you want your array to hold ?");
+		int number = sc.nextInt();
+		int i;
+		int[] array = new int[number];
+		
+
+		System.out.print("\nEnter some elements in the array: ");
+		for(i = 0; i < number; i++) {
+			array[i] = sc.nextInt();
+		}
+		sc.close();
+		
+		System.out.println("\n****** The elements in this array are *****");
+		for(i = 0; i < number; i++) {
+			System.out.print(array[i]+"\t");
+		}
+	}
+
+}

@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class InvertNumber 
+{	
+	public static void main(String[] args) 
+	{
+		Scanner inputi = new Scanner(System.in);
+		System.out.print("Futni nje numer te plote pozitiv: ");
+		int n = inputi.nextInt();
+		inputi.close();
+
+		System.out.print("Rezultati i invertuar eshte: " + invertNumber(n) + ".");
+	}
+
+	public static int invertNumber(int n) {
+		int reversed = 0;
+
+		while(n != 0) {
+			int digit = n % 10;			//digit = 5		//4.5%10= 4.5
+			reversed = reversed * 10 + digit; //= 5//rev= 5*10+4.5≈54 (rounding int)
+			n = n / 10;					//n = 4.5 //n = 4.5/10≈0 (rounding int)
+		}
+		return(reversed);
+	}
+}

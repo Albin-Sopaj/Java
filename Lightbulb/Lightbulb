@@ -1,0 +1,56 @@
+//Write the class Bulb whose objects represent electric bulbs. 
+//A light bulb can be turned on, off or broken, and provides only 
+//two operations (methods): 
+//	state () which returns a string indicating the current state of the bulb and 
+//	click () which changes its state from on to off or off to on or breaks it. 
+//	A light bulb breaks off after a certain number of clicks defined by the manufacturer. 
+//	The class must contain:
+//• One or more instance variables (attributes) that appropriately describe 
+//the state of the bulb 
+//• A suitable constructor
+//• The methods expected (previsti)
+
+//To test the class, write a TestLampadina program that creates an object of the 
+//Bulb class that allows a maximum number of clicks decided by the user and then 
+//iteratively offers the user the possibility to invoke one of the two functions 
+//(displaying the outcome of the operation, in the case of state() ) or to terminate 
+//the execution.
+
+public class Bulb {
+
+	private int clicks;						//number of user defined clicks
+	private boolean bulbstate;				//ON or OFF
+	private int maxClicks;	//max value of clicks defined by the manufacturer
+	private int counter;
+	
+	public Bulb (int userMaxClicks, int maxClicks) {
+
+		this.clicks = userMaxClicks;
+		this.maxClicks = maxClicks;
+
+	}
+
+	public String state() {
+		
+			if(this.bulbstate == true) {
+				System.out.println("Lightbulb is ON.");
+			} else if(bulbstate == false) {
+				System.out.println("Lightbulb is OFF.");
+			}
+
+		return null;
+	}
+
+	public void click() {
+			if(this.bulbstate == true) {
+				this.bulbstate = false;
+			} else if(this.bulbstate == false) {
+				this.bulbstate = true;
+			} 
+			
+	}
+
+	public int getClicks() {
+		return this.clicks;
+	}
+}

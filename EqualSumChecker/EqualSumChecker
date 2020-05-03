@@ -1,0 +1,14 @@
+public class EqualSumChecker {
+    public static boolean hasEqualSum(int x, int y, int z) {
+        if(x + y == z) {
+            //return true if sum of x + y = z, otherwise exit the code block and follow the sequence of execution.
+            return true;
+        } else
+            return false;
+    }
+    public static void main(String[] args) {
+    System.out.println(hasEqualSum(1, 1, 1);    //should return false since 1 + 1 ≠ 1
+    System.out.println(hasEqualSum(1, 1, 2);    //should return true since 1 + 1 = 2
+    System.out.println(hasEqualSum(-1, 1, 0);   //should return true since -1 + 1 = 0
+    }
+}

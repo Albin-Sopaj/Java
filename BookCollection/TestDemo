@@ -2,7 +2,7 @@
 public class Demo {
 
 	public static void main(String[] args) {
-		
+		//adding some books
 		Book myWar = new Book("Mein Kampf", "Adolf Hitler");
 		myWar.addInfo(new BookData("Hieronymites", 720, "0-395-92503-7"));
 		System.out.println(myWar);

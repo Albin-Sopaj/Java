@@ -1,0 +1,21 @@
+package methodOverloading;
+
+public class  MethodOverloading {
+
+	public static int name(int a, int b) {
+		return a + b;
+	}
+	public static int name(int a, int b, int c) {
+		return name(a, b) + c;
+	}
+	public static int name(int a, int b, int c, int d) {
+		return name(a, b, c) + d;
+	}
+	public static int name(int a, int b, int c, int d, int e) {
+		return name(a, b, c, d) + e;
+	}
+	public static void main(String[] args) {
+		int var = name(1, 2, 3, 4, 5);
+		System.out.println(var);
+	}
+}

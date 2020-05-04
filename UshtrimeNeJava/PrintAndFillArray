@@ -1,0 +1,24 @@
+//Krijoni nje matrice (varg 2D) e cila ka 5 rreshta dhe 10 shtylla. Me pas
+//mbusheni vargun ashtu qe a[i][j] = 10 * i + j
+
+public class ushtrimi1 {
+
+	public static void main(String[] args) {
+
+		int[][] matrica = new int[5][10];
+		//for loops to fill in the array
+		for (int i = 0; i < 5; i++) {
+			for (int j = 0; j < 10; j++) {
+				matrica[i][j] = 10 * i + j;
+			}
+		}
+		//for loop to print out the elements of the array
+		for (int k = 0; k < 5; k++) {
+			for (int l = 0; l < 10; l++) {
+				System.out.print(matrica[k][l] + " ");
+			}
+			System.out.println();
+		}
+	}
+
+}

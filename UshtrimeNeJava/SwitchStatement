@@ -26,7 +26,7 @@ public class Ushtrimi2 {
 			break;
 		default:
 			System.out.println("Message not found.");
-			break;
+			break; 
 		}
 	}
 }

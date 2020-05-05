@@ -1,0 +1,29 @@
+// Using the for statement, call the calculateInterest method with
+// the amount of 10000 with an interestRate of 2,3,4,5,6,7, and 8
+// and print the results to the console window.
+
+// How would you modify the for loop above to do the same thing as
+// shown but to start from 8% and work back to 2%
+
+package calculateInterest;
+
+public class CalculateInterest {
+
+	public static double calculateInterest(double amount, double interest) {
+		return amount * (interest/100);
+	}
+	public static void main(String[] args) {
+		//System.out.println("10_000 at 2% interes is " + calculateInterest(10, 2));
+		//System.out.println("10_000 at 3% interes is " + calculateInterest(10, 3));
+		//System.out.println("10_000 at 4% interes is " + calculateInterest(10, 4));
+		//System.out.println("10_000 at 5% interes is " + calculateInterest(10, 5));
+		//System.out.println("10_000 at 6% interes is " + calculateInterest(10, 6));
+		//System.out.println("10_000 at 7% interes is " + calculateInterest(10, 7));
+		//System.out.println("10_000 at 8% interes is " + calculateInterest(10, 8));
+
+		for (int i = 8; i > 1; i--) {
+			System.out.println("10_000 at " + i + " interes is " + calculateInterest(10, i));
+		}
+
+	}
+}

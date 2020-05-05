@@ -23,7 +23,7 @@ public class CalculateInterest {
 
 		for (int i = 8; i > 1; i--) {
 			System.out.println("10_000 at " + i + " interes is " + calculateInterest(10, i));
-		}
+		} 
 
 	}
 }

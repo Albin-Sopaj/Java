@@ -1,0 +1,35 @@
+package sumOfArray;
+
+import java.util.Scanner;
+
+public class SumOfEvenOddNumbers {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("How many elements do you want your array to have?");
+		int n = scanner.nextInt();
+		int sumEven = 0;
+		int sumOdd = 0;
+		int[] array = new int[n];
+		System.out.println("Enter the elements in the array");
+		for (int i = 0; i < n; i++) {
+			array[i] = scanner.nextInt();
+		}
+		System.out.println("Your elements are:");
+		for (int i = 0; i < n; i++) {
+			System.out.print(array[i] + "\t");
+		}
+
+		for (int i = 0; i < n; i++) {
+			if (array[i] % 2 == 0) {
+				sumEven = sumEven + array[i];		//storing all even numbers in the array
+			} else {
+				sumOdd = sumOdd + array[i];
+			}
+
+		}
+		System.out.println("\nThe sum of the even numbers is: " + sumEven);
+		System.out.println("The sum of the odd numbers is: " + sumOdd);
+	}
+
+}

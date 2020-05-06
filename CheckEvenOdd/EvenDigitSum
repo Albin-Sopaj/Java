@@ -1,0 +1,51 @@
+//Write a method named getEvenDigitSum with one parameter of type int called number.
+//
+//The method should return the sum of the even digits within the number.
+//
+//If the number is negative, the method should return -1 to indicate an invalid value.
+//
+//EXAMPLE INPUT/OUTPUT:
+//
+//* getEvenDigitSum(123456789); → should return 20 since 2 + 4 + 6 + 8 = 20
+//
+//* getEvenDigitSum(252); → should return 4 since 2 + 2 = 4
+//
+//* getEvenDigitSum(-22); → should return -1 since the number is negative
+
+package evenDigitSum;
+
+public class EvenDigitSum {
+
+	public static int getEvenDigitSum(int number) {
+		if (number >= 0) {
+			int evenSum = 0;
+			int m = number;
+			int a;
+			while(number > 0) {
+				number = number / 10;
+			} 
+			while(m > 0) {
+				a = m % 10;
+				//System.out.println("Digits at position "+counter+":"+a);
+				m = m / 10;
+				if(a % 2 == 0 ) {
+					evenSum = evenSum + a;
+				}
+			}
+			return evenSum;
+		} 
+		return -1;		//to indicate an invalid value
+	}
+
+	public static void main(String[] args) {
+		System.out.println("The sum of the even digits in the number is: " + 
+				getEvenDigitSum(12488));
+		System.out.println("The sum of the even digits in the number is: " + 
+				getEvenDigitSum(-22));
+		System.out.println("The sum of the even digits in the number is: " + 
+				getEvenDigitSum(252));
+		System.out.println("The sum of the even digits in the number is: " + 
+				getEvenDigitSum(123456789));
+	}
+
+}

@@ -1,0 +1,137 @@
+// Create a base class called Car.
+// It should have a few fields that would be appropriate for a generic car class like:
+// engine, cylinders, wheels, etc.
+// Constructor should initialize cylinders (number of) and the name, and set wheels to 4
+// and engine to true. Cylinders and names would be passed as parameters.
+// Create appropriate getters.
+// Create some methods like startEngine, accelerate, and brake.
+// Show a message for each in the base class.
+// Now create 3 sub classes for your favorite vehicles.
+// Override the appropriate methods to demonstrate polymorphism in use.
+// Put all classes in the one java file (this one).
+
+package com.timbuchalka.polymorphism;
+
+public class Car {
+	private boolean engine;
+	private int cylinders;
+	private int wheels;
+	private String model;
+	private String manufacturer;
+	private int horsePower;
+
+	public Car(String model, String manufacturer, int horsePower, int cylinders) {
+		super();
+		this.engine = true;
+		this.wheels = 4;
+		this.model = model;
+		this.manufacturer = manufacturer;
+		this.horsePower = horsePower;
+	}
+
+	public void startEngine() {
+		System.out.println("Starting engine...");
+	}
+
+	public void accelerate() {
+		System.out.println("Accelerating...");
+	}
+
+	public void brake() {
+		System.out.println("Breaking...");
+	}
+
+	public boolean isEngine() {
+		return engine;
+	}
+
+	public int getCylinders() {
+		return cylinders;
+	}
+
+	public int getWheels() {
+		return wheels;
+	}
+
+	public String getModel() {
+		return model;
+	}
+
+	public String getManufacturer() {
+		return manufacturer;
+	}
+
+	public int getHorsePower() {
+		return horsePower;
+	}
+
+}
+
+class Mazda extends Car {
+
+	public Mazda(String model, int horsePower, int cylinders) {
+		super(model, "Mazda", horsePower, cylinders);
+	}
+
+	@Override
+	public void startEngine() {
+		System.out.println("Mazda.startEngine() called. Now trying to start engine...");
+		System.out.println("Mazda.startEngine() called. Engine started successfully.");
+	}
+
+	@Override
+	public void accelerate() {
+		System.out.println("Mazda.accelarate() called. Mazda vehicle accelerating...");
+	}
+
+	@Override
+	public void brake() {
+		System.out.println("Mazda.brake(). Mazda vehicle now braking...");
+	}
+
+}
+
+class FIAT extends Car {
+
+	public FIAT(String model, int horsePower, int cylinders) {
+		super(model, "FIAT", horsePower, cylinders);
+	}
+
+	@Override
+	public void startEngine() {
+		System.out.println("FIAT.startEngine() called. Starting engine...");
+	}
+
+	@Override
+	public void accelerate() {
+		System.out.println("FIAT.accelerate() called. Accelerating at 100 km/h...");
+	}
+
+	@Override
+	public void brake() {
+		System.out.println("FIAT.brake() called. Now braking with a friction of 50 km/h...");
+	}
+}
+
+class Toyota extends Car {
+
+	public Toyota(String model, int horsePower, int cylinders) {
+		super(model, "Toyota", horsePower, cylinders);
+	}
+
+	@Override
+	public void startEngine() {
+		System.out.println("Toyota.startEngine() called. Now starting this Toyota car...");
+	}
+
+	@Override
+	public void accelerate() {
+		System.out.println("Toyota.accelerate() called. Now accelerating this Toyota car...");
+	}
+
+	@Override
+	public void brake() {
+		System.out.println("Toyota.brake() called. Now braking this Toyota car...");
+	}
+
+}

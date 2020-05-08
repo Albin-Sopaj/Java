@@ -1,0 +1,45 @@
+// Challenge.
+// Start with a base class of a Vehicle, then create a Car class that inherits from this base class.
+// Finally, create another class, a specific type of Car that inherits from the Car class.
+// You should be able to handle: steering, changing gears, and moving (change speed in other words).
+// You will want to decide where to put the appropriate state and behaviours (fields and methods).
+// As mentioned above, changing gears, increasing/decreasing speed should be included.
+// For you specific type of vehicle you will want to add something specific for that type of car.
+
+package com.section6.inheritance.challenge;
+
+public class Vehicle {
+	private double speed = 0;
+	private int gear = 0;
+	private boolean engine = false;		//true = engine on, false = engine off
+	
+	public void startEngine() {
+		this.engine = true;
+		System.out.println("Engine turned ON");
+	}
+	//increasing speed by 5 km per hour
+	public void increaseSpeed() {
+		this.speed += 10;
+		System.out.println("Current speed: " + this.speed + " km/h");
+	}
+	//decreasing speed by 5 km per hour
+	public void decreaseSpeed() {
+		this.speed -= 10;
+		System.out.println("Current speed: " + this.speed + " km/h");
+	}
+	//changing the gear of the vehicle from 0 - 5
+	public void changeGear(int gear) {
+		this.gear = gear;
+		System.out.println("Current gear: " + this.gear);
+	}
+	//turning the engine OFF
+	public void stopEngine() {
+		this.engine = false;
+		System.out.println("Engine turned OFF");
+	}
+	@Override
+	public String toString() {
+		return "Vehicle [speed=" + speed + ", gear=" + gear + ", engine=" + engine + "]";
+	}
+	
+}

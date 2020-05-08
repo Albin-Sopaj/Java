@@ -1,0 +1,102 @@
+//Create a class and demonstate proper encapsulation techniques.
+//The class will be called Printer.
+//It will simulate a real Computer Printer.
+//It should have fields for the toner level, number of pages printed, and
+//also whether its a duplex printer (capable of printing on both sides of the paper).
+//Add methods to fill up the toner (up to a maximum of 100%), another method to
+//simulate printing a page (which should increase the number of pages printed).
+//Decide on the scope, whether to use constructors, and anything else you think is needed.
+
+package com.albinsopaj.encapsulation;
+
+public class Printer {
+	private String model;
+	private String manufacturer;
+	private String countryOfOrigin;
+	private int warranty;				//given in months
+	private int pagesPrinted = 0;		//assuming the printer is brand new
+	private boolean isDuplex;
+	private int tonerLevel = 50;		//given in percent
+
+	public Printer(String model, String manufacturer, int warranty, String countryOfOrigin, boolean isDuplex) {
+		if (model.isEmpty() == false) {
+			this.model = model;
+		} 
+		if(manufacturer.isEmpty() == false) {
+			this.manufacturer = manufacturer;
+		}
+		if (countryOfOrigin.isEmpty() == false) {
+			this.countryOfOrigin = countryOfOrigin;
+		}
+		if (warranty > 0) {
+			this.warranty = warranty;
+		}
+		this.isDuplex = isDuplex;
+	}
+
+	public void printPaper(int pagesToPrint) throws Exception {
+		if (pagesToPrint > 0) {
+			this.pagesPrinted += pagesToPrint;
+			
+			if (pagesToPrint > 0 && pagesToPrint <= 100) {
+				this.tonerLevel -= 5;
+			} else if (pagesToPrint > 100 && pagesToPrint <= 500) {
+				this.tonerLevel -= 10;
+			} else if (pagesToPrint > 500 && pagesToPrint <= 1000) {
+				this.tonerLevel -= 25;
+			} else if (pagesToPrint > 1000 && pagesToPrint <= 5000) {
+				this.tonerLevel -= 50;
+			} else if (pagesToPrint >5000 && pagesToPrint < 9000) {
+				this.tonerLevel -= 90;
+			} else if(pagesToPrint >= 9000){
+				this.tonerLevel -= 100;
+			}
+			if (this.tonerLevel < 0) {
+				throw new Exception("Refill toner. Toner level insufficient.");
+			}
+		} else
+			throw new Exception("Couldn't print paper. Please try again.");
+		System.out.println("Printing " + pagesToPrint + " pages...");
+	}
+
+	public void addToner(int toner) throws Exception {
+		if (toner > 0 && toner <= 100) {
+			if (this.tonerLevel + toner <= 100) {
+				this.tonerLevel += toner;
+			} else {
+				throw new Exception("Can't overfill the toner.");
+			}
+		} else 
+			throw new Exception("Error. Can't refill more than 100% of toner.");
+		System.out.println("Current level of toner: " + this.tonerLevel);
+	}
+
+	public String getModel() {
+		return model;
+	}
+
+	public String getManufacturer() {
+		return manufacturer;
+	}
+
+	public String getCountryOfOrigin() {
+		return countryOfOrigin;
+	}
+
+	public int getWarranty() {
+		return warranty;
+	}
+
+	public int getPagesPrinted() {
+		return pagesPrinted;
+	}
+
+	public boolean isDuplex() {
+		return isDuplex;
+	}
+
+	public int getTonerLevel() {
+		return tonerLevel;
+	}
+
+}

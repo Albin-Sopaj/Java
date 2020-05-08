@@ -1,0 +1,29 @@
+package com.timbuchalka.polymorphism;
+
+public class Main {
+
+	public static void main(String[] args) {
+		//creating a first vehicle - Mazda
+		Mazda mazda = new Mazda("Mazda MX-5", 500, 12);
+		mazda.startEngine();
+		mazda.accelerate();
+		mazda.brake();
+		System.out.println();
+
+		//creating a second vehicle - FIAT
+		FIAT fiat = new FIAT("FIAT 500", 350, 8);
+		fiat.startEngine();
+		fiat.accelerate();
+		fiat.brake();
+		System.out.println();
+
+		//creating a third vehicle - Toyota
+		Toyota toyota = new Toyota("Toyota Yaris", 400, 14);
+		toyota.startEngine();
+		toyota.accelerate();
+		toyota.brake();
+		System.out.println();
+
+	}
+
+}

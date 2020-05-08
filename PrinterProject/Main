@@ -1,0 +1,29 @@
+package com.albinsopaj.encapsulation;
+
+public class Main {
+	
+	public static void main(String[] args) throws Exception {
+		Printer printer = new Printer("OKI MC873dnv", "Oki.com", 12, "Germany", true);
+		System.out.println("Printing new paper ...");
+		printer.printPaper(500);
+		System.out.println("Current amount of toner: " + printer.getTonerLevel());
+		System.out.println("Now refilling toner...");
+		printer.addToner(60);
+		System.out.println("Amount of toner after refill: " + printer.getTonerLevel());
+		System.out.println("Printing more pages...");
+		printer.printPaper(5_900);
+		System.out.println("Current level of toner: " + printer.getTonerLevel());
+		System.out.println("Printing some more pages...");
+		printer.printPaper(50);
+		System.out.println("Current amount of toner: " + printer.getTonerLevel());
+		printer.printPaper(1);
+		System.out.println("Current toner level: " + printer.getTonerLevel());
+//		printer.printPaper(5);
+		System.out.println("Total number of printed pages: " + printer.getPagesPrinted());
+		printer.addToner(100);
+		printer.printPaper(30_000);
+		System.out.println(printer.getTonerLevel());
+		printer.printPaper(2);
+
+	}
+}

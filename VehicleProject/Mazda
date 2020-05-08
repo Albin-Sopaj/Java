@@ -1,0 +1,11 @@
+package com.section6.inheritance.challenge;
+
+public class Mazda extends Car {
+	private String size;
+	
+	//not sure if this is true for other cars but usually all mazda cars are large
+	public void mazda() {
+		this.size = "Large";
+		System.out.println("Most Mazda vehicles are " + this.size);
+	}
+}

@@ -1,0 +1,33 @@
+package com.section6.inheritance.challenge;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Vehicle vehicle = new Vehicle();
+		vehicle.startEngine();
+		vehicle.changeGear(3);
+		vehicle.increaseSpeed();
+		vehicle.increaseSpeed();
+		vehicle.changeGear(1);
+		vehicle.decreaseSpeed();
+		vehicle.decreaseSpeed();
+		vehicle.stopEngine();
+		System.out.println();System.out.println();
+		
+		Car car = new Car();
+		car.startEngine();
+		car.increaseSpeed();
+		car.changeGear(4);
+		car.increaseSpeed();
+		car.increaseSpeed();
+		car.steerLeft();
+		car.steerLeft();
+		car.decreaseSpeed();
+		car.steerRight();
+		car.decreaseSpeed();
+		car.decreaseSpeed();
+		
+//		System.out.println(vehicle.toString());
+	}
+
+}

@@ -1,0 +1,16 @@
+package com.section6.inheritance.challenge;
+
+public class Car extends Vehicle {
+	private int direction;
+	
+	//direction to the right by 5 degrees
+	public void steerRight() {
+		this.direction += 5;	
+		System.out.println("Now steering: " + this.direction + " degrees"+ " to the right");
+	}
+	//direction to the left by 5 degrees
+	public void steerLeft() {
+		this.direction -= 5;
+		System.out.println("Now steering: " + this.direction + " degrees" + " to the left");
+	}
+}

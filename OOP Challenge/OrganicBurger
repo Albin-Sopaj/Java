@@ -1,0 +1,55 @@
+package com.oop.masterchallenge;
+
+public class OrganicBurger extends Hamburger {
+	private double avocado;
+	private double onions;
+
+	public HealthyBurger(String meat, double price) {
+		super("Healthy Burger", "Brown Rye Bread Roll", meat, price);
+	}
+
+	public void setAvocadoPrice(double price) {
+		this.avocado = price;
+	}
+
+	public void setOnionsPrice(double price) {
+		this.onions = price;
+	}
+
+	@Override
+	public double getTotalPrice() {
+		double totalPrice = super.getPrice() + super.getCarrot() + super.getLettuce() + 
+				super.getSauce() + super.getTomatoes() + this.avocado + this.onions;
+		System.out.println("Additional toppings: ");
+		if (super.getLettuce() == 0 && super.getCarrot() == 0 && super.getSauce() == 0 && super.getTomatoes() == 0 && this.avocado == 0 && this.onions == 0) {
+			System.out.print("None\n");
+		}
+		if (super.getLettuce() != 0) {
+			System.out.println("Lettuce: €" + getLettuce());
+		}
+		if (super.getCarrot() != 0) {
+			System.out.println("Carrot: €" + getCarrot());
+		}
+		if (super.getSauce() != 0) {
+			System.out.println("Sauce: €" + getSauce());
+		}
+		if (super.getTomatoes() != 0) {
+			System.out.println("Tomatoes: €" + getTomatoes());
+		}
+		if (this.avocado != 0) {
+			System.out.println("Avocado: €" + this.avocado);
+		}
+		if (this.onions != 0) {
+			System.out.println("Onions: €" + this.onions);
+		}
+		System.out.println("Total price: €" + totalPrice);
+		return totalPrice;
+	}
+
+	@Override
+	public double getPrice() {
+		System.out.println("Base price of the burger: €" + super.getPrice());
+		return 0;
+	}
+
+}

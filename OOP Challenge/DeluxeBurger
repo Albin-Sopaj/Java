@@ -1,0 +1,55 @@
+package com.oop.masterchallenge;
+
+public class DeluxeBurger extends Hamburger {
+	private double chips;
+	private double drinks;
+
+	public DeluxeBurger(String breadRollType, String meat, double price) {
+		super("Deluxe Burger", breadRollType, meat, price);
+	}
+
+	public void setChipsPrice(double price) {
+		this.chips = price;
+	}
+
+	public void setDrinksPrice(double price) {
+		this.drinks = price;
+	}
+
+	@Override
+	public double getTotalPrice() {
+		double totalPrice = super.getPrice() + super.getCarrot() + super.getLettuce() + 
+				super.getSauce() + super.getTomatoes() + this.drinks + this.chips;
+		System.out.println("Additional toppings: ");
+		if (super.getLettuce() == 0 && super.getCarrot() == 0 && super.getSauce() == 0 && super.getTomatoes() == 0 && this.chips == 0 && this.drinks == 0) {
+			System.out.print("None\n");
+		}
+		if (super.getLettuce() != 0) {
+			System.out.println("Lettuce: €" + getLettuce());
+		}
+		if (super.getCarrot() != 0) {
+			System.out.println("Carrot: €" + getCarrot());
+		}
+		if (super.getSauce() != 0) {
+			System.out.println("Sauce: €" + getSauce());
+		}
+		if (super.getTomatoes() != 0) {
+			System.out.println("Tomatoes: €" + getTomatoes());
+		}
+		if (this.drinks != 0) {
+			System.out.println("Drinks: €" + this.drinks);
+		}
+		if (this.chips != 0) {
+			System.out.println("Chips: €" + this.chips);
+		}
+		System.out.println("Total price: €" + totalPrice);
+		return totalPrice;
+	}
+
+	@Override
+	public double getPrice() {
+		System.out.println("Base price: " + super.getPrice());
+		return 0;
+	}
+
+}

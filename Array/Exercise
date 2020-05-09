@@ -1,0 +1,46 @@
+package com.arrays.albinsopaj
+import java.util.Scanner;
+
+public class Exercise {
+	//declare a scanner to accept user input
+	private static Scanner scanner = new Scanner(System.in);
+	
+	public static void main(String[] args) {
+		//declaring an array of integers
+		int[] array = getIntegers(5);
+		//printing our array of integers
+		printArray(array);
+		//getting the average value of our array
+		int[] average = getAverage(array);
+		//the above statement will generate an error of type mismatch: cannot convert from double to int, because the method
+		//itself is of type double but we are trying to store it in an array of type int, which isn't allowed.
+		System.out.println("The average value of our array is: " + average);
+	}
+	
+	public static int[] getIntegers(int number) {
+		int[] array = new int[number];	//the user will get to decide how many elements the array should have
+		System.out.println("Enter " + number + " elements for the array");
+		//taking user input using a for loop
+		for(int i = 0; i < array.length; i++) {
+			array[i] = scanner.nextInt();
+		}
+		return array;
+	}
+	
+	public static void printArray(int[] array) {
+		for(int i = 0; i < array.length; i++) {
+			System.out.println("Element at index " + i + ", holds value " + array[i]);
+		}
+	}
+	
+	public static double getAverage(int[] array) {
+		System.out.println("Now getting the average value of our array...");
+		double sum = 0;
+		for(int i = 0; i < array.length; i++) {
+			sum += array[i];
+		}
+		double averageValue = sum / array.length;
+		return averageValue;
+	}
+	
+}

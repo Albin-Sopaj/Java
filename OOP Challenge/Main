@@ -1,0 +1,35 @@
+package com.oop.masterchallenge;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// a normal burger
+		Hamburger hamburger = new Hamburger("Normal Burger", "Normal", "Cow", 4.99);
+		hamburger.setSaucePrice(0.99);
+		hamburger.setLettucePrice(1.29);
+		hamburger.getTotalPrice();
+		System.out.println(); System.out.println();
+
+		//a healthy burger
+		HealthyBurger healthyBurger = new HealthyBurger("Pork", 6.99);
+		healthyBurger.setCarrotPrice(0.59);
+		healthyBurger.setAvocadoPrice(2.99);
+		healthyBurger.setLettucePrice(0.55);
+		healthyBurger.setOnionsPrice(0.25);
+		healthyBurger.getTotalPrice();
+		System.out.println();System.out.println();
+
+		//a deluxe burger
+		DeluxeBurger deluxeBurger = new DeluxeBurger("Normal", "Tuna", 7.99);
+		deluxeBurger.setDrinksPrice(2.99);
+		deluxeBurger.setChipsPrice(1.99);
+		deluxeBurger.getTotalPrice();
+		System.out.println();System.out.println();
+
+		//another deluxe burger
+		DeluxeBurger deluxeBurger2 = new DeluxeBurger("Normal", "Salmon", 8.99);
+		deluxeBurger2.getTotalPrice();
+
+	}
+
+}

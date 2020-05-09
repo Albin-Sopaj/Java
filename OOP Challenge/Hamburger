@@ -1,0 +1,125 @@
+// The purpose of the application is to help a fictitious company called Burger King to
+// manage their process of selling hamburgers.
+// Our application will help Burger King to select types of burgers, 
+// some of the additional items (additions) to be added to the burgers and the pricing.
+// We want to create a base hamburger, but also two other types of hamburgers that are 
+//popular in Burger King's store. The basic hamburger should have the following 
+//items: bread roll type, meat and up to 4 additional toppings (things like lettuce, 
+//tomato, carrot, etc) that the customer can select to be added to the burger.
+// Each one of these items gets charged an additional price so you need some way to track
+//how many items got added and to calculate the final price (base burger with all the 
+//additions). This burger has a base price and the additions are all separately priced 
+//(up to 4 additions, see above). Create a Hamburger class to deal with all the above.
+// The constructor should only include the roll type, meat and price, can also include 
+//name of burger or you can use a setter. Also create two extra varieties of Hamburgers 
+//(subclasses) to cater for 
+// a) Healthy burger (on a brown rye bread roll), plus two 
+//addition items that can be added. The healthy burger can have 6 items (additions) in 
+//total. 
+// Hint:  you probably want to process the two additional items in this new class 
+//(subclass of Hamburger), not the base class (Hamburger), since the two additions are 
+//only appropriate for this new class (in other words new burger type).
+// b) Deluxe hamburger - comes with chips and drinks as additions, but no extra additions
+//are allowed.
+// Hint:  You have to find a way to automatically add these new additions at the time 
+//the deluxe burger object is created, and then prevent other additions being made.
+//  All 3 classes should have a method that can be called anytime to show the base price 
+//of the hamburger plus all additionals, each showing the addition name, and addition 
+//price, and a grand/final total for the burger (base price + all additions)
+// For the two additional classes this may require you to be looking at the base class 
+//for pricing and then adding totals to final price.
+
+package com.oop.masterchallenge;
+
+public class Hamburger {
+	private String breadRollType;
+	private String meat;
+	private double lettuce;
+	private double tomatoes;
+	private double carrot;
+	private double sauce;
+	private double price;
+	private String name;
+
+	public Hamburger(String name, String breadRollType, String meat, double price) {
+		this.name = name;
+		this.breadRollType = breadRollType;
+		this.meat = meat;
+		this.price = price;
+	}
+
+	public double getTotalPrice() {
+		double totalPrice = this.price + this.carrot + this.lettuce + this.sauce + 
+				this.tomatoes;
+		getPrice();
+		System.out.println("Additional toppings: ");
+		if (this.lettuce == 0 && this.carrot == 0 && this.sauce == 0 && this.tomatoes == 0) {
+			System.out.print("None\n");
+		}
+		if (this.lettuce != 0) {
+			System.out.println("Lettuce: €" + getLettuce());
+		}
+		if (this.carrot != 0) {
+			System.out.println("Carrot: €" + getCarrot());
+		}
+		if (this.sauce != 0) {
+			System.out.println("Sauce: €" + getSauce());
+		}
+		if (this.tomatoes != 0) {
+			System.out.println("Tomatoes: €" + getTomatoes());
+		}
+		System.out.println("Total price: €" + totalPrice);
+		return totalPrice;
+	}
+
+	public double getPrice() {
+		double price = this.price;
+		System.out.println("Base price of the burger: €" + price);
+		return price;
+	}
+
+	public void setLettucePrice(double price) {
+		this.lettuce = price;
+	}
+
+	public void setTomatoesPrice(double price) {
+		this.tomatoes = price;
+	}
+
+	public void setCarrotPrice(double price) {
+		this.carrot = price;
+	}
+
+	public void setSaucePrice(double price) {
+		this.sauce = price;
+	}
+
+	public String getBreadRollType() {
+		return breadRollType;
+	}
+
+	public String getMeat() {
+		return meat;
+	}
+
+	public double getLettuce() {
+		return lettuce;
+	}
+
+	public double getTomatoes() {
+		return tomatoes;
+	}
+
+	public double getCarrot() {
+		return carrot;
+	}
+
+	public double getSauce() {
+		return sauce;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+}
